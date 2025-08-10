@@ -1,0 +1,128 @@
+  /* Style the cart message container */
+#cart-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 64px; /* Increase the font size for the cart message */
+  height: 100vh; /* Set the height of the container to 100% of the viewport height */
+  margin-top: -50px; /* Push the message up */
+}
+    /* Style the close button */
+    #close-cart-message {
+      font-size: 50px; /* Adjust the font size for the close button */
+      padding: 10px 20px; /* Adjust padding for height and width of the button */
+      background-color: #333; /* Change the button's background color */
+      color: red; /* Change the button's text color */
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px; /* Add margin to separate the button from the message */
+    }
+
+    /* Apply styles to the category list */
+    .category-list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px; /* Add equal spacing between items */
+    }
+  
+    .category-item {
+      flex-basis: calc(25% - 40px); /* Adjusted flex-basis to include spacing */
+      text-align: center;
+      margin: 15px 10px; /* Adjust margin for spacing */
+    }
+  
+    /* Apply spacing and maintain height for category images */
+    .category-item img {
+      width: 100%; /* Set the image width to fill the container */
+      max-height: 120px; /* Set a maximum height for the images */
+      object-fit: contain; /* Maintain aspect ratio while fitting */
+    }
+  
+    .category-item h3 {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      text-align: center;
+    }
+  
+    /* Style the navigation menu items */
+    .menu {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      padding: 0; /* Remove padding for menu items */
+    }
+  
+    .menu li {
+      margin-left: 20px; /* Add spacing between menu items */
+    }
+  
+    .menu li a {
+      text-decoration: none;
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+    }
+  
+    .menu li a:hover {
+      color: #febd69;
+    }
+  
+    /* Center-align headings */
+    h1, h2 {
+      text-align: center;
+    }
+  
+    /* Contact Section */
+    #contact {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    #contact::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      opacity: 0.7;
+      background: url('../contact.jpg') no-repeat center center/cover;
+    }
+  
+    #contact-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Center-align items horizontally */
+      text-align: center; /* Center-align text within items */
+      padding-bottom: 34px;
+    }
+  
+    #contact-box input,
+    #contact-box textarea {
+      width: 100%;
+      padding: 0.5rem;
+      border-radius: 9px;
+      font-size: 1.1rem;
+      text-align: center; /* Center-align text within input and textarea */
+    }
+  
+    #contact-box form {
+      width: 40%;
+      text-align: center; /* Center-align the form */
+    }
+  
+    #contact-box label {
+      font-size: 1.3rem;
+      font-family: 'Bree Serif', serif;
+      text-align: center; /* Center-align the labels */
+    }
+  
+    footer {
+      background: black;
+      color: white;
+      padding: 9px 20px;
+    }

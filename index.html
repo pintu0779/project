@@ -1,0 +1,406 @@
+<page import="com.db.DBConnect"%>
+<page import="java.sql.Connection"%>
+<page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Honey Website Design</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!--box icons-->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!--google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
+</head>
+
+<body>
+    <!--header-->
+    <header>
+		
+        <a href="#" class="logo"><i class='bx bx-home-alt-2'></i>FOURSTAR</a>
+
+        <ul class="navlist">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#shop">Our Shop</a></li>
+            <li><a href="#review">Our Customer</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+
+        <div class="nav-icons">
+            <a href="#"><i class='bx bx-search'></i></a>
+            <a href="login1.jsp"><i class='bx bxs-user-account'></i></a>
+            <!-- cart -->
+            <div id="cart">
+       			 <h4>Shopping</h4>
+       			 	<div id="cart-items1">
+					<!--ul id="cart-items"></ul-->
+ 
+                  	<!-- Cart items will be displayed here -->
+        		</div>
+    		</div>
+                    
+            <!--cart end -->
+            <a href="#"><i class='bx bx-cart' ></i></a>
+            
+           
+         
+            <!--cart option-->
+            <!--div class="bx bx-menu" id="menu-icon"></div-->
+            <a href="cart.html"><i class='bx bx-chevrons-right'></i></a>
+        </div>
+           <div class="s-btnn">
+        	   <button id="checkout-button">Order Now</button>
+           </div>
+    </header>
+    
+    
+    <!--home-->
+    <section class="home" id="home">
+        <div class="home-text">
+            <h1>Meet,<span>Eat &</span><br>Enjoy The true<br>taste</h1>
+            <a href="#" class="btn">Explore Menu<i class='bx bxs-right-arrow'></i></a>
+            <a href="#" class="btn2">Order Now</a>
+        </div>
+        <div class="home-img">
+            <img src="./image/hero.png">
+        </div>
+    </section>
+    <!--container-->
+    <section class="container">
+        <div class="container-box">
+            <img src="./image/c1.png">
+            <h3>10.00 am - 09.00 pm</h3>
+            <a href="#">Working Hours</a>
+        </div>
+
+        <div class="container-box">
+            <img src="image/c2.png">
+            <h3>Enterprise 712222</h3>
+            <a href="#">Get Direction</a>
+        </div>
+
+        <div class="container-box">
+            <img src="image/c3.png">
+            <h3>+91_9681770779</h3>
+            <a href="#">Call Us Now</a>
+        </div>
+
+    </section>
+    <!--about us -->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="./image/about.png">
+        </div>
+        <div class="about-text">
+            <h2>Living well begins<br>with eating well</h2>
+            <p>
+                Quality food in the comfort of your home. Whether you're a vegetarian, vegan, gluten-free, or following a specific diet plan, you can find options that suit your needs. Additionally , food delivery is a time-saving solution for busy individuals and families,
+                eliminating the need for cooking or dining out. It's also an excellent choice for hosting gatherings or special occasions at home without the hassle of cooking and cleaning. In conclusion, good food delivery services bring a world of culinary
+                delights to your doorstep, offering convenience,variety, and flexibility to cater to your tastes and preferences. They have become an integral part of modern dining,making it easier than ever to enjoy delicious meals in the comfort of
+                your own home.
+            </p>
+            <a href="#" class="btn">Explore Story<i class='bx bxs-right-arrow'></i></a>
+        </div>
+    </section>
+    <!---our shop-->
+    
+    <section class="shop" id="shop">
+        <div class="middle-text">
+            <h4>Our Shop</h4>
+            <h2>Lets Check Popular Products</h2>
+        </div>
+
+        <div class="shop-content">
+
+            <div class="row">
+                <img src="images/biryani/Ambur-Chicken-Biryani.jpg">
+                
+                	<div class="product">
+       				 	<p>Ambur-Chicken-Biryani</p>
+       				 <div class="in-text">
+       				 	<div class="price">
+                        <h6>Price: $21.00</h6>
+                       </div>
+                    	<div class="s-btnn">
+           				<button onclick="addToCart('Ambur', 10)">Add to Cart</button>
+                       </div>
+                     </div>
+    				</div>
+    			 </div>
+                
+           <!-------------------------------------------------------------------------------------->     
+               <!--<h3>Biryani</h3>
+                <p>Ambur-Chicken-Biryani</p>-->
+                <!--div class="in-text">
+                    <!--div class="price">
+                        <h6>$21.00</h6>
+                    </div-->
+                    <!--div class="s-btnn">
+                        <a href="#">Order now</a>
+                    </div-->
+                <!--</div-->
+
+                <!--div class="top-icon">
+                    <a href="#"><i class='bx bx-heart'></i></a>
+                </div-->
+          <!------------------------------------------------------------------------------------------>
+           
+
+				<div class="row">
+                <img src="images/biryani/kamrupi-biryani.jpg">    
+                	<div class="product">
+       				  <p>Hydrabad-Chicken-Biryani</p>
+       				 <div class="in-text">
+       				 	<div class="price">
+                        <h6>Price: $20.00</h6>
+                       </div>
+                    	<div class="s-btnn">
+							<button onclick="addToCart('Hydrabad', 20)">Add to Cart</button>
+                        <!--a href="#">Order now</a-->
+                       </div>
+                     </div>
+    				</div>
+    			</div>
+
+
+  <!------------------------------------------------------------------------------------------------
+            <div class="row">
+                <img src="images/biryani/kamrupi-biryani.jpg">
+                <h3>Biryani</h3>
+                <p>Hydrabad-Chicken-Biryani</p>
+                <div class="in-text">
+                    <div class="price">
+                        <h6>$20.00</h6>
+                    </div>
+                    <div class="s-btnn">
+                        <a href="#">Order now</a>
+                    </div>
+                </div>
+
+                <div class="top-icon">
+                    <a href="#"><i class='bx bx-heart'></i></a>
+                </div>
+            </div-->
+<!------------------------------------------------------------------------------------------------>
+		<div class="row">
+                 <img src="images/biryani/memonibiryani.png">  
+                	<div class="product">
+       				  <p>Memoni-Biryani</p>
+       				 <div class="in-text">
+       				 	<div class="price">
+                        <h6>Price: $19.00</h6>
+                       </div>
+                    	<div class="s-btnn">
+							<button onclick="addToCart('Memoni', 19)">Add to Cart</button>
+                        <!--a href="#">Order now</a-->
+                       </div>
+                     </div>
+    				</div>
+    			</div>
+
+<!------------------------------------------------------------------------------------------------>
+            <!--div class="row">
+                <img src="images/biryani/memonibiryani.png">
+                <h3>Biryani</h3>
+                <p>Mughlai-Biryani</p>
+                <div class="in-text">
+                    <div class="price">
+                        <h6>$20.00</h6>
+                    </div>
+                    <div class="s-btnn">
+                        <a href="#">Order now</a>
+                    </div>
+                </div>
+
+                <div class="top-icon">
+                    <a href="#"><i class='bx bx-heart'></i></a>
+                </div>
+            </div-->
+<!-------------------------------------------------------------------------------------------------->
+
+            <div class="row">
+                <img src="images/biryani/memonibiryani.png">
+                <h3>Biryani</h3>
+                <p>Memoni-Biryani</p>
+                <div class="in-text">
+                    <div class="price">
+                        <h6>$20.00</h6>
+                    </div>
+                    <div class="s-btnn">
+                        <a href="#">Order now</a>
+                    </div>
+                </div>
+
+                <div class="top-icon">
+                    <a href="#"><i class='bx bx-heart'></i></a>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <img src="images/biryani/egg-biryani.jpeg">
+                <h3>Biryani</h3>
+                <p>Egg-Biryani</p>
+                <div class="in-text">
+                    <div class="price">
+                        <h6>$10.00</h6>
+                    </div>
+                    <div class="s-btnn">
+                        <a href="#">Order now</a>
+                    </div>
+                </div>
+
+                <div class="top-icon">
+                    <a href="#"><i class='bx bx-heart'></i></a>
+                </div>
+            </div>
+        </div>
+
+     <div class="row-btn">
+            <a href="cart1.html" class="btn">All Products <i class='bx bxs-right-arrow'></i></a>
+        </div>
+    
+
+    <!--reviews-->
+    <section class="review" id="review">
+        <div class="middle-text">
+            <h4>Our Customer</h4>
+            <h2>Clients Review About Our Food</h2>
+        </div>
+        <div class="review-content">
+
+            <div class="box">
+                <p>"I had the pleasure of dining at last night, and it was an exquisite culinary experience from start to finish. The ambiance was inviting, and the staff was exceptionally attentive and knowledgeable about the menu</p>
+                <div class="in-box">
+                    <div class="bx-img">
+                        <img src="./image/r1.jpg">
+                    </div>
+                    <div class="bxx-text">
+                        <h4>FOODIE_SAHA</h4>
+                        <h5>NETWORKING</h5>
+                        <div class="rattings">
+                            <a href="#"><i class='bx bxs-star'></i></a>
+                            <a href="#"><i class='bx bxs-star'></i></a>
+                            <a href="#"><i class='bx bxs-star'></i></a>
+                            <a href="#"><i class='bx bxs-star'></i></a>
+                            <a href="#"><i class='bx bxs-star'></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <p>"I had the pleasure of dining at last night, and it was an exquisite culinary experience from start to finish. The ambiance was inviting, and the staff was exceptionally attentive and knowledgeable about the menu</p>
+                <div class="in-box">
+                    <div class="bx-img">
+                        <img src="./image/r2.jpg">
+                    </div>
+                    <div class="bxx-text">
+                        <h4>BUBAI_SAHA</h4>
+                        <h5>IT_SERVICES</h5>
+                        <div class="rattings">
+                            <a href="#"><i class='bx bxs-star'></i></a>
+                            <a href="#"><i class='bx bxs-star'></i></a>
+                            <a href="#"><i class='bx bxs-star'></i></a>
+                            <a href="#"><i class='bx bxs-star'></i></a>
+                            <a href="#"><i class='bx bxs-star'></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <p>"I had the pleasure of dining at last night, and it was an exquisite culinary experience from start to finish. The ambiance was inviting, and the staff was exceptionally attentive and knowledgeable about the menu</p>
+                <div class="in-box">
+                    <div class="bx-img">
+                        <img src="./image/r2.jpg">
+                    </div>
+                    <div class="bxx-text">
+                        <h4>PINTU_SAHA</h4>
+                        <h5>Food_Vlogger</h5>
+                        <div class="rattings">
+                            <a href="#"><i class='bx bxs-star'></i></a>
+                            <a href="#"><i class='bx bxs-star'></i></a>
+                            <a href="#"><i class='bx bxs-star'></i></a>
+                            <a href="#"><i class='bx bxs-star'></i></a>
+                            <a href="#"><i class='bx bxs-star'></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!--contact us-->
+    <section class="contact" id="contact">
+        <div class="contact-contact">
+            <div class="contact-img">
+                <div class="c-one">
+                    <img src="image/f1.png">
+                </div>
+                <div class="c-one">
+                    <img src="image/f2.png">
+                </div>
+            </div>
+
+            <div class="contact-text">
+                <h2>Contact Us</h2>
+                <p>Over its history as a food,the main uses of cooking, baking,desserts,as a spred on bread, as an addition to various beverages such as tea, and a sweetener in some commercial beverages
+                </p>
+                <div class="social">
+                    <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+                    <a href="#"><i class='bx bxl-instagram-alt' ></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                    <a href="#"><i class='bx bxl-git'></i></a>
+                    <a href="#"><i class='bx bxl-google'></i></a>
+                </div>
+            </div>
+
+            <div class="details">
+                <div class="main-d">
+                    <a href="#"><i class='bx bxs-location-plus'></i>369 G.T.ROAD BAIDYABATI HOOGHLY-712222 WB,INDIA</a>
+                </div>
+
+                <div class="main-d">
+                    <a href="#"><i class='bx bx-mobile'></i>+91_9681770779</a>
+                </div>
+
+                <div class="main-d">
+                    <a href="#"><i class='bx bxl-youtube'></i>pintu saha</a>
+                </div>
+
+                <div class="main-d">
+                    <a href="#">
+                        <div class="main-d">
+                            <a href="#"><i class='bx bxs-location-plus'></i>Subscribe</a>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    <!--scroll top-->
+    <a href="#" class="scroll">
+        <i class='bx bx-chevrons-up'></i>
+    </a>
+
+
+    <!--link to js-->
+    <script src="script.js"></script>
+    <script src="inside_cart1_script4.js"></script>
+   
+</body>
+
+</html>
